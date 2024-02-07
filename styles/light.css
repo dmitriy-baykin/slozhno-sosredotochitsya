@@ -13,3 +13,11 @@
   background-size: cover;
   background-attachment: fixed;
 }
+
+.theme_light .rec::after {
+  display: none;
+}
+
+.theme_light .rec::before {
+  display: none;
+}
