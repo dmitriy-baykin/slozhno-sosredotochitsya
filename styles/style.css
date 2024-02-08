@@ -4,8 +4,8 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  background-color: var(--bg-color, #000028);
-  background-image: url(../images/cover-image-dark.png);
+  background-color: var(--bg-color);
+  background-image: var(--bg-image);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -34,7 +34,7 @@
 
 .header__theme-menu-button {
   background: transparent;
-  color: var(--decor-color, #ff0070);
+  color: var(--button-color, #ff0070);
   border: 1px solid transparent;
   font-size: 18px;
   line-height: 100%;
@@ -44,12 +44,12 @@
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--decorated-color);
+  border: 1px solid var(--hover-color, #ff0070);
   pointer-events: none;
 }
 
 .header__theme-menu-button:hover {
-  border-color: currentColor;
+  border: 1px solid var(--hover-color);
 }
 
 .header__theme-menu-button:active {
@@ -57,7 +57,8 @@
   border-color: var(--accent-color, #ff0070);
 }
 
-.header__theme-menu-button:focus-visible {
+.header__theme-menu-button:focus {
+  border-bottom: 1px solid var(--focus-color);
   outline: none;
 }
 
@@ -191,15 +192,12 @@
 }
 
 .span-link:hover {
-  border-bottom: 1px solid currentColor;
+  text-decoration: underline;
+  text-decoration-color: var(--link-hover-color, #f1b2ce);
 }
 
 .span-link:focus {
-  outline: none;
-}
-
-.span-link:focus-visible {
-  outline: 1px solid currentColor;
+  outline: 1px solid var(--link-hover-color);
 }
 
 .indent {
@@ -278,6 +276,8 @@
 
   .header__theme-menu-list {
     flex-direction: column;
+    padding-right: 5px;
+    padding-block-start: 5px;
   }
 
   .decorated-zone::before {
@@ -306,7 +306,7 @@
   }
 
   .main {
-    padding: 40px 10px;
+    padding: 0 10px;
     gap: 50px;
   }
 
@@ -322,6 +322,7 @@
   .gallery {
     display: flex;
     flex-direction: column;
+    gap: 10px;
   }
 
   .section-images {
@@ -360,6 +361,10 @@
   .section {
     grid-template-columns: fit-content(236px) 1fr;
     gap: 20px;
+  }
+
+  .article {
+    gap: 9, 97px;
   }
 
   .column-list {
