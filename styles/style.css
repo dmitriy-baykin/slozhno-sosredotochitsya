@@ -54,7 +54,7 @@
 
 .header__theme-menu-button:active {
   cursor: default;
-  border-color: var(--accent-color, #ff0070);
+  border-color: var(--button-color, #ff0070);
 }
 
 .header__theme-menu-button:focus {
@@ -327,6 +327,10 @@
 
   .section-images {
     gap: 10px;
+  }
+
+  .footer {
+    margin-block-start: 40px;
   }
 
   .footer-title {

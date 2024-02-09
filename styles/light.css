@@ -40,4 +40,12 @@
     --button-color: #353430;
     --link-hover-color: #353430;
   }
+
+  .theme_auto .rec::after {
+    display: none;
+  }
+
+  .theme_auto .rec::before {
+    display: none;
+  }
 }
